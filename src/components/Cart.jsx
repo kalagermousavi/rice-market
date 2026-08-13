@@ -4,7 +4,9 @@ function Cart() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log("Count updated:", count);
+    if (count === 3) {
+      console.log("سبد خرید به ۳ محصول رسید");
+    }
   }, [count]);
 
   return (
