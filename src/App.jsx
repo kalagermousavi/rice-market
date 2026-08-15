@@ -1,3 +1,4 @@
+import ShoppingCart from "./components/ShoppingCart";
 import { useState } from "react";
 import Cart from "./components/Cart";
 import Header from "./components/Header";
@@ -13,6 +14,7 @@ function App() {
         نمایش / مخفی کردن محصولات
       </button>
       {showProducts && <ProductList />}
+      <ShoppingCart />
       <Cart />
     </>
   );
