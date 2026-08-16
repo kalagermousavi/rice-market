@@ -6,7 +6,7 @@ import ProductList from "./components/ProductList";
 
 function App() {
   const [showProducts, setShowProducts] = useState(true);
-
+  const [showCart, setShowCart] = useState(true);
   return (
     <>
       <Header />
@@ -14,7 +14,11 @@ function App() {
         نمایش / مخفی کردن محصولات
       </button>
       {showProducts && <ProductList />}
-      <ShoppingCart />
+
+      <button onClick={() => setShowCart(!showCart)}>
+        نمایش / مخفی کردن سبد
+      </button>
+      {showCart && <ShoppingCart />}
       <Cart />
     </>
   );
